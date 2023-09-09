@@ -28,9 +28,9 @@ public class OcrService {
 
     public String scanImage() {
         try {
-            File image = new File("/Users/yukijanvier/Documents/OCR-recipe-generator/src/main/java/com/ocrrecgen/OCRrecipegenerator/images/image.png");
-            return tesseract.doOCR(image);
+            tesseract.setDatapath("C:\\Tess4J\\tessdata");
 
+            return tesseract.doOCR(new File("C:\\Users\\russk\\Downloads\\image.png"));
         } catch (TesseractException e) {
             return e.getMessage();
         }
