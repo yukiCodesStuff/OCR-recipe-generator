@@ -20,10 +20,6 @@ public class OcrService {
 
     public OcrService() {
         this.tesseract = new Tesseract();
-        tesseract.setDatapath("/Users/yukijanvier/Documents/OCR-recipe-generator/tessdata");
-        tesseract.setLanguage("eng");
-        tesseract.setPageSegMode(1);
-        tesseract.setOcrEngineMode(1);
     }
 
     public String scanImage() {
