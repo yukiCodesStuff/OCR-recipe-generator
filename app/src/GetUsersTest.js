@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import './GetUsersTest.css'
 
 export default function GetUsersTest() {
 
@@ -23,10 +24,22 @@ export default function GetUsersTest() {
     return (
         <div>
             {scannedData.map(customer =>
-            <div key={customer.id}>
-                <p>
-                    {customer.name} {customer.language}
-                </p>
+            <div className="customerinfocontainer" key={customer.id}>
+                <h1>{customer.name}</h1>
+                <ul>
+                    <li>
+                        {customer.age}
+                    </li>
+                    <li>
+                        {customer.dob}
+                    </li>
+                    <li>
+                        {customer.email}
+                    </li>
+                    <li>
+                        {customer.language}
+                    </li>
+                </ul>
             </div>
             )}
         </div>

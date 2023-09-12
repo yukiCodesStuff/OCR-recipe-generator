@@ -1,10 +1,19 @@
 import './App.css';
-import GetUsersTest from './GetUsersTest'
+import GetUsersTest from './GetUsersTest';
+import ExampleScan from './GetExampleScan';
+import React, {Fragment} from 'react';
 
 const App = () => {
 
   return (
-      <GetUsersTest />
+      <React.Fragment>
+          <div>
+            <GetUsersTest />
+          </div>
+          <div>
+            <ExampleScan />
+          </div>
+      </React.Fragment>
   );
 }
 
